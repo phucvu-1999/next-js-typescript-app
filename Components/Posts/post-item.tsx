@@ -4,10 +4,17 @@ import Image from "next/image";
 
 import styles from "./post-item.module.css";
 
+<<<<<<< HEAD
 import { MarkDownData } from "../../Interfaces";
 
 interface PostItem {
   post: MarkDownData;
+=======
+import { PostItemProps } from "../../Interfaces";
+
+interface PostItem {
+  post: PostItemProps;
+>>>>>>> 64a01f9a36f0119d348b2a3e0afdbdbd66fb09b5
 }
 
 const PostItem: React.FC<PostItem> = ({ post }) => {

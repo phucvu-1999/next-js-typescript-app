@@ -15,10 +15,18 @@ export function getPostData(postIdentifier: string) {
   const postSlug = postIdentifier.replace(/\.md$/, "");
   const filePath = path.join(postDir, `${postSlug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf-8");
+<<<<<<< HEAD
   const { data, content } = matter(fileContent);
 
   const postData = {
     ...(data as MarkDownData),
+=======
+  const { data, content }: { data: MarkDownData; content: string } =
+    matter(fileContent);
+
+  const postData = {
+    ...data,
+>>>>>>> 64a01f9a36f0119d348b2a3e0afdbdbd66fb09b5
     content,
   };
 
